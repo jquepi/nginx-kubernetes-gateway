@@ -41,6 +41,14 @@ func NewEventLoop(
 		logger:   logger,
 		handler:  handler,
 		preparer: preparer,
+}
+
+// NewEventLoop creates a new EventLoop.
+func NewEventLoop(eventCh <-chan interface{}, logger logr.Logger, handler EventHandler) *EventLoop {
+	return &EventLoop{
+		eventCh: eventCh,
+		logger:  logger,
+		handler: handler,
 	}
 }
 
