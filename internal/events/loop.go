@@ -57,9 +57,10 @@ func NewEventLoop(
 		preparer: preparer,
 func NewEventLoop(eventCh <-chan interface{}, logger logr.Logger, handler EventHandler) *EventLoop {
 	return &EventLoop{
-		eventCh: eventCh,
-		logger:  logger,
-		handler: handler,
+		eventCh:  eventCh,
+		logger:   logger,
+		handler:  handler,
+		preparer: preparer,
 	}
 }
 
