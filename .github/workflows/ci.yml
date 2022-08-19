@@ -113,7 +113,7 @@ jobs:
           cache: true
 
       - name: Download Syft
-        uses: anchore/sbom-action/download-syft@v0.11.0
+        uses: anchore/sbom-action/download-syft@v0.12.0
 
       - name: Build binary
         uses: goreleaser/goreleaser-action@v3
